@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class DashboardComponent implements OnInit {
 
-  public id: number = 3;
+  public id: string = '1FR120';
 
   constructor(public router: Router) {
   }
