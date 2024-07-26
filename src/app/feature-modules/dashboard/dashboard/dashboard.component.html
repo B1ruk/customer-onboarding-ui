@@ -1,0 +1,31 @@
+<div class="container mt-4">
+
+  <p class="title is-4">Company Information</p>
+  <table class="table is-striped is-small is-fullwidth mt-6">
+    <thead>
+    <tr>
+      <th>Name of Company</th>
+      <th>Type of Entity</th>
+      <th>Business Activity</th>
+      <th>Country of Incorporation</th>
+      <th>Registration Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="cursor" [routerLink]="['/dashboard/detail', id]">
+      <td>Example Company Ltd</td>
+      <td>Corporation</td>
+      <td>Software Development</td>
+      <td>USA</td>
+      <td>123456789</td>
+    </tr>
+    <tr>
+      <td>Another Company Inc</td>
+      <td>LLC</td>
+      <td>Marketing Services</td>
+      <td>UK</td>
+      <td>987654321</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
