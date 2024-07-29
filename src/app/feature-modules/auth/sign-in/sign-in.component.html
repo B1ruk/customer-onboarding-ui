@@ -1,0 +1,28 @@
+<div class="columns content__container">
+  <div class="column has-background-grey		"></div>
+  <div class="column">
+    <div class="is-center mt-6 ml-4">
+      <p class="title is-5">Sign In</p>
+      <hr/>
+      <hr/>
+      <form [formGroup]="authForm" >
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control">
+            <input class="input" type="text" formControlName="username" placeholder="username" value="">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input class="input" type="password"  formControlName="password" placeholder="password" value="">
+          </div>
+        </div>
+
+        <div class="field mt-5">
+          <button class="button is-dark  column has-text-white  is-fullwidth" (click)="onSubmit()">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
