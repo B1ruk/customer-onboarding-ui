@@ -22,7 +22,12 @@ export class AppAuthService {
             sessionStorage.setItem(APP_ROLE,role);
             sessionStorage.setItem(APP_TOKEN,token);
 
-            this.router.navigate(['/dashboard']);
+            if (role=='PROCESSOR' || role=='PROCESSOR'){
+              this.router.navigate(['/dashboard']);
+            }
+            if (role=='CUSTOMER'){
+              this.router.navigate(['/customer']);
+            }
           }
         })
       );
