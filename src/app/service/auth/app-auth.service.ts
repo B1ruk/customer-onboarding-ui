@@ -12,6 +12,11 @@ export class AppAuthService {
 
   constructor(public authService:AuthService,public  router:Router) { }
 
+  clearSession(){
+    sessionStorage.removeItem(APP_ROLE);
+    sessionStorage.removeItem(APP_TOKEN);
+  }
+
   authenticate(userCredential:UserCredential):Observable<AuthResponse>{
     return this.authService
       .authenticate(userCredential)
