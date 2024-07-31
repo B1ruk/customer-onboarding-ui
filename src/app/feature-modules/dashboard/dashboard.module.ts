@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OnboardingDetailComponent } from './onboarding-detail/onboarding-detail.component';
 import { DetailSearchComponent } from './detail-search/detail-search.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -13,9 +14,10 @@ import { DetailSearchComponent } from './detail-search/detail-search.component';
     OnboardingDetailComponent,
     DetailSearchComponent
   ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        DashboardRoutingModule,
+        ReactiveFormsModule
+    ]
 })
 export class DashboardModule { }

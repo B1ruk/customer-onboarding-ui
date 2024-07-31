@@ -26,6 +26,7 @@ export class AuthService {
   }
 
   private handleError(error: HttpErrorResponse) {
+    console.log(error);
     console.error('An error occurred:', error.error);
     return throwError(() => new Error('Something went wrong with authentication.'));
   }

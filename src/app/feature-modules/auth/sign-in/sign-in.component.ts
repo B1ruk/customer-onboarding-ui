@@ -33,6 +33,7 @@ export class SignInComponent implements OnInit {
         username: this.authForm.get('username')?.value,
         password: this.authForm.get('password')?.value,
       }
+      console.log(credential);
       this.appService.authenticate(credential)
         .subscribe(authResponse => {
           console.log(authResponse);

@@ -3,13 +3,14 @@ import {AuthService} from "../../api/service/auth-service";
 import {AuthResponse, UserCredential} from "../../api/model/model";
 import {Observable, tap} from "rxjs";
 import {APP_ROLE, APP_TOKEN} from "../../api/api-config";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppAuthService {
 
-  constructor(public authService:AuthService) { }
+  constructor(public authService:AuthService,public  router:Router) { }
 
   authenticate(userCredential:UserCredential):Observable<AuthResponse>{
     return this.authService
@@ -19,7 +20,9 @@ export class AppAuthService {
           if (authResp){
             const {token,role}=authResp;
             sessionStorage.setItem(APP_ROLE,role);
-            sessionStorage.setItem(APP_TOKEN,role);
+            sessionStorage.setItem(APP_TOKEN,token);
+
+            this.router.navigate(['/dashboard']);
           }
         })
       );
