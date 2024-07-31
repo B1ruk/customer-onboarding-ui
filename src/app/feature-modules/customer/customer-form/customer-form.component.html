@@ -8,117 +8,122 @@
   <div class="columns ml-4 mt-4">
 
     <div class="column is-two-thirds">
+      <form [formGroup]="applicationForm">
 
-      <div class="field">
-        <label class="label">Main purpose for applying at MCB </label>
-        <div class="control">
-          <div class="select is-fullwidth">
-            <select>
-              <option>Account to operate locally</option>
-              <option>Account to operate overseas</option>
-              <option>Energy & commodities financing</option>
-              <option>Investment portfolio</option>
-            </select>
+
+        <div class="field">
+          <label class="label">Main purpose for applying at MCB </label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select formControlName="purpose">
+                <option>Account to operate locally</option>
+                <option>Account to operate overseas</option>
+                <option>Energy & commodities financing</option>
+                <option>Investment portfolio</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label class="label">Name of the company</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Text input" value="">
-        </div>
-      </div>
-
-
-      <div class="field">
-        <label class="label">Type of entity</label>
-        <div class="control">
-          <div class="select is-fullwidth">
-            <select>
-              <option>Association</option>
-              <option>Private Company</option>
-              <option>Trust</option>
-            </select>
+        <div class="field">
+          <label class="label">Name of the company</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input" formControlName="companyName">
           </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label class="label">Business activity</label>
-        <div class="control">
-          <div class="select is-fullwidth">
-            <select>
-              <option>Banking</option>
-              <option>Fishing</option>
-              <option>Manufacturing</option>
-            </select>
+
+        <div class="field">
+          <label class="label">Type of entity</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select formControlName="entityType">
+                <option>Association</option>
+                <option>Private Company</option>
+                <option>Trust</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label class="label">System to prompt license requirements if business activity is Banking</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Text input" value="---">
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label">Country of incorporation</label>
-        <div class="control">
-          <div class="select is-fullwidth">
-            <select>
-              <option>Association</option>
-              <option>Private Company</option>
-              <option>Trust</option>
-            </select>
+        <div class="field">
+          <label class="label">Business activity</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select formControlName="businessActivity">
+                <option>Banking</option>
+                <option>Fishing</option>
+                <option>Manufacturing</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label class="label">Registration Number</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Text input" value="">
+        <div class="field">
+          <label class="label">System to prompt license requirements if business activity is Banking</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input" formControlName="businessActivity">
+          </div>
         </div>
-      </div>
 
-
-      <div class="field">
-        <label class="label">Date of incorporation</label>
-        <div class="control">
-          <input class="input is-fullwidth" type="date" placeholder="Text input" value="bulma">
+        <div class="field">
+          <label class="label">Country of incorporation</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select formControlName="countryOfIncorporation">
+                <option>Association</option>
+                <option>Private Company</option>
+                <option>Trust</option>
+              </select>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label class="label">Name of Director / Shareholders</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Text input" value="">
+        <div class="field">
+          <label class="label">Registration Number</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input" formControlName="registrationNumber">
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label class="label">Passport Number</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Text input" value="---">
-        </div>
-      </div>
 
-      <div class="field">
-        <label class="label">Name of designated of applicant</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Text input" value="---">
+        <div class="field">
+          <label class="label">Date of incorporation</label>
+          <div class="control">
+            <input class="input is-fullwidth" type="date" placeholder="Text input" formControlName="dateOfIncorporation">
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label class="label">Email address for communication</label>
-        <div class="control">
-          <input class="input " type="email" placeholder="Text input" value="">
+        <div class="field">
+          <label class="label">Name of Director / Shareholders</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input" formControlName="directorName">
+          </div>
         </div>
-      </div>
+
+        <div class="field">
+          <label class="label">Passport Number</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input" formControlName="passportNumber">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Name of designated of applicant</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input" formControlName="applicantName">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Email address for communication</label>
+          <div class="control">
+            <input class="input " type="email" placeholder="Text input" formControlName="email">
+          </div>
+        </div>
+
+      </form>
+
     </div>
 
   </div>
@@ -157,8 +162,8 @@
 
           <div class="block mt-2">
             <div class="columns mt-4 is-column-gap-2">
-              <button class="button is-half column is-half">Cancel</button>
-              <button class="button is-half column is-dark ">Register</button>
+              <button class="button is-half column is-half" (click)="applicationForm.reset()">Cancel</button>
+              <button class="button is-half column is-dark " (click)="onApplicationSubmit()"> Register</button>
             </div>
           </div>
         </div>

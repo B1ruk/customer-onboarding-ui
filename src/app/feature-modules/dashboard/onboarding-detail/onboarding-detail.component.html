@@ -144,8 +144,8 @@
 
               <div class="block mt-2">
                 <div class="columns mt-4 is-column-gap-2">
-                  <button class="button is-half column is-dark">Reject</button>
-                  <button class="button is-half column is-light ">Accept</button>
+                  <button class="button is-half column is-dark" (click)="updateApplicationStatus('REJECTED')">Reject</button>
+                  <button class="button is-half column is-light " (click)="updateApplicationStatus('ACCEPTED')">Accept</button>
                 </div>
               </div>
             </div>
